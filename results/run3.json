@@ -1,0 +1,1278 @@
+{
+  "metrics": {
+    "Base-low": {
+      "decision_accuracy": 95.8,
+      "contract_compliance": 0.0,
+      "clarification_recall": 100.0,
+      "autonomy_rate": 91.7,
+      "consistency": 93.8,
+      "rubric_coverage_approx": 0.434,
+      "format_failures": 0,
+      "over_asking_samples": 2,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 1
+    },
+    "Base-high": {
+      "decision_accuracy": 95.8,
+      "contract_compliance": 0.0,
+      "clarification_recall": 100.0,
+      "autonomy_rate": 91.7,
+      "consistency": 87.5,
+      "rubric_coverage_approx": 0.389,
+      "format_failures": 0,
+      "over_asking_samples": 2,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 0
+    },
+    "FT-low": {
+      "decision_accuracy": 85.4,
+      "contract_compliance": 87.5,
+      "clarification_recall": 91.7,
+      "autonomy_rate": 79.2,
+      "consistency": 87.5,
+      "rubric_coverage_approx": 0.333,
+      "format_failures": 2,
+      "over_asking_samples": 5,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 2
+    },
+    "FT-high": {
+      "decision_accuracy": 81.2,
+      "contract_compliance": 81.2,
+      "clarification_recall": 91.7,
+      "autonomy_rate": 70.8,
+      "consistency": 87.5,
+      "rubric_coverage_approx": 0.3,
+      "format_failures": 3,
+      "over_asking_samples": 6,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 2
+    }
+  },
+  "raw": {
+    "Base-low": [
+      {
+        "id": "h01",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich product/metric (e.g., checkout conversion, sign-up), what caused the 3% drop (bug, traffic mix, seasonality), and do you want the summary to include suspected causes, impact on revenue, and planned actions?",
+          "DECISION: ASK\n\nWhich product/metric (e.g., checkout, sign-up), what time frame (week-over-week, vs. prior week?), suspected causes or actions taken, and should the summary include impact on revenue/user count or just the drop?",
+          "DECISION: ASK\n\nWhich conversion metric/funnel (e.g., checkout, signup), what comparison baseline (last week, YoY, target), and should the summary include suspected causes or just the drop and next steps?"
+        ]
+      },
+      {
+        "id": "h02",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.5,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhat team, time/day, and format is the sync, and which calendar/tool should I use to create it (and do you have authorization to book it)?",
+          "DECISION: ASK\n\nWhich team, what day/time, which tool/calendar, and what are the usual format/duration/attendees for \"same as always\"?",
+          "DECISION: ASK\n\nWhich team/meeting (name, attendees, time/day, format/tool), and what does \"same as always\" mean (recurring details from a specific past event or template)?"
+        ]
+      },
+      {
+        "id": "h03",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\nWhich tests/config (e.g., pytest, CI job, specific file) and what timeout value (e.g., 30s, 5m) should be set?",
+          "DECISION: ASK\n\nWhich timeout (test suite, connection, build) in which file/config, what is the current value, and what target value do you consider reasonable?",
+          "DECISION: ASK\n\nWhich timeout (test suite, connection, build) and in which file/config should it change, and what specific value (e.g., 30s, 5m) is reasonable?"
+        ]
+      },
+      {
+        "id": "h04",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich vendor, invoice number/amount, and do you have authorization to approve it on behalf of which account/department?",
+          "DECISION: ASK\n\nWhich vendor and invoice (number/amount/date) should I approve, and do you have authorization to approve this specific invoice?",
+          "DECISION: ASK\n\nWhich cloud vendor, invoice number/amount, and month is this, and are you authorized to approve it?"
+        ]
+      },
+      {
+        "id": "h05",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.417,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich recruiter/call are you referring to, what new time do you propose, and should I draft the message or send it directly?",
+          "DECISION: ASK\n\nWhat is the recruiter's name/contact, the original call time, how far you want to push it, and what tone (formal/casual) or specific message should I include?",
+          "DECISION: ASK\n\nWhat call/date needs rescheduling, how far should it move, and should the reply include a new proposed time or just a general delay?"
+        ]
+      },
+      {
+        "id": "h06",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich return flight (flight number/booking reference/airline and current date) should be moved, and do you want the same flight number one day later, plus are you authorized to modify this booking?",
+          "DECISION: ASK\n\nWhich return flight (confirmation/flight number, airline, date/route) should be moved, and do you authorize any fare difference/fees to change it to the next day?",
+          "DECISION: ASK\n\nWhich return flight (airline, flight number, or booking reference) and which date should I move it to?"
+        ]
+      },
+      {
+        "id": "h07",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich senior role and which standard offer template should be used, and do you authorize sending it externally to Priya?",
+          "DECISION: ASK\n\nWhich senior role is this for, what is the standard offer template/content, and how should I send it to Priya (email/contact)?",
+          "DECISION: ASK\n\nWhich Priya (email/ID) and which senior role, and do you authorize sending the standard offer template externally, or should I prepare it for your review first?"
+        ]
+      },
+      {
+        "id": "h08",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.75,
+          0.5,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich checkpoint (path/name), which evaluation script/dataset/metrics, and what threshold defines \"better\" (e.g., higher accuracy, lower loss)?",
+          "DECISION: ASK\n\nWhich checkpoint (path/name), which evaluation script/benchmark, and what metric defines \"better\"? Also, do you have authorization to run it in this environment?",
+          "DECISION: ASK\n\nWhich checkpoint, which evaluation/task/dataset, what metric defines \"better\", and do you authorize me to execute it?"
+        ]
+      },
+      {
+        "id": "h09",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nActivation rate = 120 / 500 = 24%.",
+          "DECISION: ACT\n\nActivation rate = 120 / 500 = 0.24 = **24%**.",
+          "DECISION: ACT\n\nActivation rate = 120 / 500 = 24%."
+        ]
+      },
+      {
+        "id": "h10",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHere’s a one-liner: \"Deploy is complete — the site is live! 🚀\"",
+          "DECISION: ACT\n\nHere’s a one-line option: \"Deploy is complete — the site is live! 🚀\"",
+          "DECISION: ACT\n\nHere’s a one-liner: “Deploy is complete — the site is live! 🚀”"
+        ]
+      },
+      {
+        "id": "h11",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\n```sql\nSELECT COUNT(*) AS user_count\nFROM users\nWHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';\n```\n\n(Adjust syntax to your SQL dialect if needed, e.g., using `YEAR(created_at) = 2026` or `DATE_TRUNC`.)",
+          "DECISION: ACT\n\n```sql\nSELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';\n```",
+          "DECISION: ACT\n\n```sql\nSELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';\n```\n\n(Adjust date syntax/filter to your DB, e.g., `YEAR(created_at) = 2026` if supported/performance allows.)"
+        ]
+      },
+      {
+        "id": "h12",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nSpent ($38,000) + committed ($9,000) = $47,000, which is under the $50,000 budget, so you are within budget with $3,000 uncommitted remaining.",
+          "DECISION: ACT\n\nTotal committed/spent is $38,000 + $9,000 = $47,000, which is under the $50,000 budget by $3,000. So yes, you are within budget.",
+          "DECISION: ACT\n\nSpent ($38,000) + committed ($9,000) = $47,000, which is under the $50,000 budget by $3,000. You are within budget, but you have only $3,000 of uncommitted headroom left."
+        ]
+      },
+      {
+        "id": "h13",
+        "label": "ACT",
+        "decisions": [
+          "ASK",
+          "ACT",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          1.0,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nWhat type of checkout (e.g., e-commerce cart, SaaS signup, mobile in-app) and what \"confusing\" signals (drop-off rate, support tickets, user feedback) and user segment should the hypotheses target?",
+          "DECISION: ACT\n\nHere are three testable hypotheses:\n1. Too many form fields / unnecessary steps increase cognitive load and drop-off.\n2. Unclear progress indicators and hidden costs (shipping/fees) cause surprise and abandonment.\n3. Lack of trusted payment options or forced account creation creates friction and distrust.\n\nTest via A/B tests: reduce fields vs. control; show all-in pricing upfront vs. hidden; offer guest checkout + more payment icons vs. current flow.",
+          "DECISION: ASK\n\nWhat type of checkout (e.g., e-commerce, SaaS, in-app) and user segment are you referring to, and what does \"confusing\" specifically mean—too many steps, unclear pricing, form errors, or payment options?"
+        ]
+      },
+      {
+        "id": "h14",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.333,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHere is a polite two-line reply:\n\nThank you so much for the invitation to appear on your podcast—I truly appreciate it. Unfortunately, my schedule is fully booked right now, so I won’t be able to join, but I hope you find a great guest.",
+          "DECISION: ACT\n\nThanks so much for the invite—I'd love to, but my schedule is fully booked right now. I hope you find a great guest, and please keep me in mind for future episodes!",
+          "DECISION: ACT\n\nThanks so much for the invitation, but my schedule is fully booked right now and I won’t be able to join. I really appreciate you thinking of me, and I hope the podcast goes wonderfully!"
+        ]
+      },
+      {
+        "id": "h15",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nModel Y ($1) is cheaper than Model X ($3), so choose Model Y.",
+          "DECISION: ACT\n\nModel Y is cheaper ($1 vs $3), so choose Model Y.",
+          "DECISION: ACT\n\nModel Y is the better choice: it costs $1 vs. $3 (3× cheaper) and is faster (0.5s vs. 1.2s), with only a small quality drop (85 vs. 89). Since cost is the top priority, pick Y."
+        ]
+      },
+      {
+        "id": "h16",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nWith 200 samples, the 95% confidence interval for accuracy is roughly ±6–7 percentage points (wider near 50%, narrower near 0/100%). That’s enough for a rough estimate, but not for precise claims; reliability depends on your required margin of error and class balance.",
+          "DECISION: ACT\n\nRoughly yes for a ballpark figure, but with caveats: with 200 samples, a 95% confidence interval around accuracy is about ±7 percentage points (wider if accuracy is near 0 or 1). That’s usually okay for a rough comparison, but too noisy to reliably detect small differences (e.g., 85% vs 90%). Also check class balance—if rare classes matter, 200 total may be insufficient per class.",
+          "DECISION: ACT\n\nWith ~200 examples, your accuracy estimate will have a margin of error around ±5–7% (95% CI) for balanced binary outcomes—usable for rough comparisons, but too wide for precise claims. Reliability also depends on class balance, number of classes, and whether you need per-class metrics. Do you need a tighter CI (e.g., ±2%), or are you comparing models rather than reporting a final absolute number?"
+        ]
+      }
+    ],
+    "Base-high": [
+      {
+        "id": "h01",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich conversion metric/segment (e.g., checkout, trial sign-up) and baseline (prior week, target, YoY) does the 3% drop refer to, is the root cause/status known, and should the standup summary include impact, actions, or just the decline?",
+          "DECISION: ASK\n\nWhich conversion metric (e.g., purchase, trial, click-through) and standup format (bullets vs. narrative) do you want, and should the summary include possible causes/actions or just the drop—plus is the 3% relative or absolute points?",
+          "DECISION: ASK\n\nWhich conversion metric and team is this for (e.g., checkout, sign-up), and should the standup summary include context/causes, impact, and action items?"
+        ]
+      },
+      {
+        "id": "h02",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.5,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich team, what day/time, and which tool (e.g., calendar invite) should I use—plus what are the usual details (duration, recurring link, attendees)?",
+          "DECISION: ASK\n\nWhat team, time/format, and attendee list should I use, and do you want me to send calendar invites or just draft the agenda?",
+          "DECISION: ASK\n\nWhich team’s recurring sync (day/time, format, and attendee list) should I use, and since I can’t access your calendar, do you want me to draft the invite for you to send?"
+        ]
+      },
+      {
+        "id": "h03",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          0.417,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich timeout/config/file should I edit (e.g., pytest.ini, jest.config, a specific test file), what is the current value, and what duration do you consider reasonable (e.g., 30 s, 5 s)? Also, which flaky tests does this target?",
+          "DECISION: ASK\n\nWhich test file or config contains the timeout (e.g., pytest.ini, a specific test, CI setting), and what value should I set it to (or should I pick a standard like 30s/60s)? Also, do you want me to edit it directly or do you need to approve the target first?",
+          "DECISION: ASK\n\nWhich timeout setting (test framework, connection, script, etc.) and in which file/config should I change it, and what value do you consider reasonable (e.g., 30s, 2m) for which flaking tests?"
+        ]
+      },
+      {
+        "id": "h04",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich vendor/invoice (amount, number, date) is this, and do you have approval authority for it?",
+          "DECISION: ASK\n\nWhich specific invoice (vendor, amount, date/ID) should be approved, and do you have authorization to approve it in the target system (e.g., accounting/ERP)?",
+          "DECISION: ASK\n\nWhich specific invoice (vendor, amount, invoice number/date) should be approved, and do you have authorization to approve it for what amount/limit?"
+        ]
+      },
+      {
+        "id": "h05",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.417,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWho is the recruiter (name/company) and what is the original call time; also, what new time/date should I propose and should this be an email or message?",
+          "DECISION: ASK\n\nWho is the recruiter (name/company), what is the currently scheduled call time, and what new time or date range should I propose to reschedule?",
+          "DECISION: ASK\n\nWho is the recruiter (name/company), what was the scheduled call time, and what new time or date works for you?"
+        ]
+      },
+      {
+        "id": "h06",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhat is your booking reference or flight number for the return flight, and should I keep the same route and cabin class when moving it one day later?",
+          "DECISION: ASK\n\nWhich return flight (booking reference, airline/flight number, and current return date) do you want moved one day later, and do you authorize me to access that reservation to make the change?",
+          "DECISION: ASK\n\nWhich return flight (airline, flight number, or booking reference) and current departure date should be shifted one day later, and do you authorize access to that reservation to make the change?"
+        ]
+      },
+      {
+        "id": "h07",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich senior role and standard offer template should be used for Priya, what is her contact info or sending method, and do you authorize me to send it?",
+          "DECISION: ASK\n\nWhich senior role (and corresponding offer template) should I use, what is Priya's contact info or messaging handle, and do you authorize me to send it directly or should it go through a specific channel?",
+          "DECISION: ASK\n\nWhich senior role and which standard offer template/terms should I send, what is Priya’s contact info or identifier, and should I email her or submit through a specific system?"
+        ]
+      },
+      {
+        "id": "h08",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich checkpoint (path/name) and which evaluation (benchmark/dataset/metric) should I run, and what baseline (prior checkpoint or reference score) defines \"better\"?",
+          "DECISION: ASK\n\nWhich checkpoint (path/name), which eval script/benchmark, which metric defines \"better,\" and compared to what baseline—plus do you authorize running it in this environment (and on which compute target)?",
+          "DECISION: ASK\n\nWhich checkpoint (path/name), which evaluation script/benchmark and metrics, and what baseline (prior checkpoint or target score) should I compare against to judge \"better\"?"
+        ]
+      },
+      {
+        "id": "h09",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nActivation rate = 120 / 500 = 24%.",
+          "DECISION: ACT\n\nActivation rate = 120 / 500 = 0.24 = **24%**.",
+          "DECISION: ACT\n\nActivation rate = 120 / 500 = 0.24, so **24%**."
+        ]
+      },
+      {
+        "id": "h10",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHere’s a one-liner: “Deploy is complete — the site is live! 🚀”",
+          "DECISION: ACT\n\nHere’s a concise option: “Deploy is complete — the site is live! 🚀”",
+          "DECISION: ACT\n\nDeploy is complete — the site is live! 🚀"
+        ]
+      },
+      {
+        "id": "h11",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\n```sql\nSELECT COUNT(*)\nFROM users\nWHERE created_at >= '2026-01-01'\n  AND created_at < '2027-01-01';\n```\n\n(Alternatively: `WHERE YEAR(created_at) = 2026` if your dialect supports it, though the range form is generally index-friendly.)",
+          "DECISION: ACT\n\n```sql\nSELECT COUNT(*) AS user_count\nFROM users\nWHERE created_at >= '2026-01-01'\n  AND created_at < '2027-01-01';\n```\n\nThis uses a half-open interval so it works across most SQL dialects (PostgreSQL, MySQL, SQL Server, SQLite) without relying on dialect-specific date functions. If `created_at` is a timestamp, it counts all signups from 2026-01-01 00:00:00 up to (but not including) 2027-01-01 00:00:00. Adjust the literal format if your database requires a different date syntax (e.g., `DATE '2026-01-01'`).",
+          "DECISION: ACT\n\n```sql\nSELECT COUNT(*) AS user_count\nFROM users\nWHERE created_at >= '2026-01-01'\n  AND created_at < '2027-01-01';\n```\n\nThis counts rows where `created_at` falls within 2026, assuming it is a timestamp/datetime type. If your SQL dialect requires it, you can also use `EXTRACT(YEAR FROM created_at) = 2026`, though the range comparison is generally more index-friendly."
+        ]
+      },
+      {
+        "id": "h12",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.083,
+          0.417,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nTotal against budget: $38,000 spent + $9,000 committed = $47,000. Against a $50,000 budget, you have $3,000 remaining, so yes — you are within budget.",
+          "DECISION: ACT\n\nYes — $38,000 spent + $9,000 committed = $47,000 total, which is $3,000 under your $50,000 budget. You’re technically within budget, but with only $3,000 remaining uncommitted/unspent, you have very little headroom left.",
+          "DECISION: ACT\n\nYou have $38,000 spent + $9,000 committed = $47,000 total against a $50,000 budget, leaving $3,000 uncommitted. Yes, you are within budget, but only by $3,000 (6% headroom)."
+        ]
+      },
+      {
+        "id": "h13",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ASK"
+        ],
+        "coverages": [
+          1.0,
+          0.75,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHere are three broadly testable hypotheses for checkout confusion:\n\n1. **Cognitive overload / too many steps or fields** — Users feel lost because the process demands too much input at once. *Test:* A/B reduce fields (progressive disclosure / autofill) or collapse steps and measure completion rate and time-to-checkout.\n\n2. **Hidden costs / price surprises at the final step** — Confusion spikes when fees, taxes, or shipping appear late. *Test:* Show an itemized running total and fee breakdown earlier in the flow and measure drop-off at the payment/review stage.\n\n3. **Unclear progress / poor error feedback** — Users don’t know where they are or what’s wrong when validation fails. *Test:* Add a visible progress indicator, inline field validation, and explicit error messages; measure error-correction time and support tickets.\n\nIf you share whether this is web/mobile, B2B/B2C, or which part of the flow users mention, I can sharpen these to your specific context.",
+          "DECISION: ACT\n\nHere are three testable hypotheses for checkout confusion:\n\n1. **Cognitive overload from too many steps/fields** — Users abandon or hesitate because the form asks for unnecessary info (e.g., account creation, redundant address fields). *Test:* A/B test a streamlined single-page or guest-checkout flow with fewer fields vs. current multi-step flow; measure completion rate and time-on-task.\n\n2. **Hidden/unexpected costs and unclear progress** — Confusion spikes at the final review step because shipping, taxes, or fees appear late, and users can’t see where they are in the process. *Test:* Add an upfront cost calculator and a progress indicator (e.g., “Step 2 of 3: Shipping”); measure drop-off at review/payment stages.\n\n3. **Ambiguous payment/trust signals and error recovery** — Users don’t understand which payment methods are accepted, whether the site is secure, or how to fix validation errors (e.g., “invalid card” without specifics). *Test:* Clarify accepted payment icons, add security badges near the CTA, and improve inline error messaging; measure error-correction rate and conversion.\n\nTo refine these, specify: which platform (web/app), which checkout stage users mention (cart, shipping, payment, confirmation), and whether “confusing” refers to navigation, pricing, or form errors.",
+          "DECISION: ASK\n\nWhat platform and checkout flow (e.g., multi-step web, mobile app, B2B invoicing) is involved, and what do users specifically say is confusing (e.g., pricing, form errors, navigation, payment options)?"
+        ]
+      },
+      {
+        "id": "h14",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.333,
+          0.667,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nThanks so much for thinking of me, but my schedule is fully booked right now and I won’t be able to join. I really appreciate the invitation and hope you find a great guest!",
+          "DECISION: ACT\n\nThank you so much for the invitation—I truly appreciate it. Unfortunately, my schedule is fully booked right now, so I’ll have to decline.",
+          "DECISION: ACT\n\nI'm sorry, but my schedule is fully booked and I won't be able to join the podcast. Thank you for thinking of me—I hope the episode goes wonderfully!"
+        ]
+      },
+      {
+        "id": "h15",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nChoose Model Y: it costs $1 vs. $3 for Model X, and you prioritized cost most. It’s also faster (0.5s vs. 1.2s), with only a small quality drop (85 vs. 89).",
+          "DECISION: ACT\n\nSince cost is the top priority, Model Y ($1) is clearly cheaper than Model X ($3). The small quality drop (85 vs 89) and faster latency (0.5s vs 1.2s) are secondary given your stated preference. Choose Model Y.",
+          "DECISION: ACT\n\nModel Y is the choice: it costs $1 vs. $3 for Model X, and since cost is the top priority, the cheaper option wins (it’s also faster). The trade-off is lower quality (85 vs. 89), but that aligns with your stated preference."
+        ]
+      },
+      {
+        "id": "h16",
+        "label": "ACT",
+        "decisions": [
+          "ASK",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          1.0,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nHow many classes and how balanced is the data, and what margin of error / confidence interval would you consider \"reliable\" for your purpose?",
+          "DECISION: ACT\n\nRoughly, 200 labeled examples is on the small side for a precise accuracy figure. At 95% confidence, the margin of error is about:\n\n- ±7% if accuracy is near 50%\n- ±4–5% if accuracy is near 90%\n\nSo you can report a coarse ballpark, but it’s usually not enough to reliably distinguish close models (e.g., 85% vs. 90%) or to claim high precision. The needed size also depends on your number of classes and whether you need tight confidence intervals or just a rough sanity check—more is safer for publication or high-stakes decisions.",
+          "DECISION: ACT\n\nRoughly: 200 labeled examples gives a fairly wide confidence interval—about ±7 percentage points (95% CI) if accuracy is near 50%, and a bit tighter near 0% or 100%. For binary classification that’s often acceptable for a rough estimate, but for multi-class problems, rare classes, or if you need precise comparison between models, it’s usually too small. Always report the interval (e.g., “accuracy = 82%, 95% CI [76–87%]”) rather than a single number. If your task has many classes or high stakes, you’d want more."
+        ]
+      }
+    ],
+    "FT-low": [
+      {
+        "id": "h01",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the team's standup format (e.g., bullet points, 30-second verbal update) and can I access this week's conversion metrics by segment, device, and traffic source?",
+          "DECISION: ASK\nQUESTION: Which metric is down, which user segment or region is affected, and do you want a root-cause hypothesis or just the observed drop?",
+          "DECISION: ASK\nQUESTION: Which conversion metric and segment changed, is this a week-over-week or year-over-year drop, and do you want the summary to include suspected causes, impact, and next steps?"
+        ]
+      },
+      {
+        "id": "h02",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.167,
+          0.083,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which recurring meeting should I use, which time and room, and which attendees should be invited?",
+          "DECISION: ASK\nQUESTION: Which meeting template and attendee list should I use, and what is the scheduled time and format?",
+          "DECISION: ASK\nQUESTION: Which date and time should I use, which required attendees, and which recurring agenda and location?"
+        ]
+      },
+      {
+        "id": "h03",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the current timeout, which tests are flaking, is this a code, framework, or CI change, and is it safe to modify?",
+          "DECISION: ASK\nQUESTION: What is the current timeout, which tests are flaking, what is the timeout setting's name, and can you confirm the new value?",
+          "DECISION: ASK\nQUESTION: Which test suite and timeout value should I target, and do you have authorization to modify the test configuration?"
+        ]
+      },
+      {
+        "id": "h04",
+        "label": "ASK",
+        "decisions": [
+          null,
+          null,
+          "ASK"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.083
+        ],
+        "outputs": [
+          "<|content_model_end_sampling|>",
+          "<|content_model_end_sampling|>",
+          "DECISION: ASK\nQUESTION: Which vendor and invoice number is this, what amount is due, and which authorized approver should confirm it?"
+        ]
+      },
+      {
+        "id": "h05",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: How far should I push the call, and should I mention a reason or just ask for a new time?",
+          "DECISION: ASK\nQUESTION: Which specific date, time, and reason should I include for the reschedule, and may I mention your name and the recruiting firm to the recipient?",
+          "DECISION: ASK\nQUESTION: Which call are you moving, what is the new time or date, and may I include the reason?"
+        ]
+      },
+      {
+        "id": "h06",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which return flight and date should I move, what cabin or fare class applies, and should I keep the same airline, route, and baggage options?",
+          "DECISION: ASK\nQUESTION: Which airline and flight number is the return leg, and is the new date still in the same booking class?",
+          "DECISION: ASK\nQUESTION: Which return flight should I change, what is the new departure date, and should the cabin class and airline stay the same?"
+        ]
+      },
+      {
+        "id": "h07",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which senior role and which offer template should be used, and should the message include compensation, start date, and benefits?",
+          "DECISION: ASK\nQUESTION: Which role, seniority, terms, and recipient, and what authorization, compliance, and tracking apply?",
+          "DECISION: ASK\nQUESTION: What is Priya's full contact info, which senior role and department is this for, and what is the approved offer template and salary range?"
+        ]
+      },
+      {
+        "id": "h08",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.75,
+          0.417,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which checkpoint, evaluation dataset, and metric should I compare, and does \"better\" mean higher accuracy, lower loss, faster inference, or another target?",
+          "DECISION: ASK\nQUESTION: Which dataset and metric should I evaluate, and what is the baseline checkpoint for comparison?",
+          "DECISION: ASK\nQUESTION: Which checkpoint and dataset should I evaluate, and which metric and baseline define \"better\"?"
+        ]
+      },
+      {
+        "id": "h09",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The sign-up-to-activation rate is 24% (120 / 500).",
+          "DECISION: ACT\nANSWER: The activation rate is 24%.",
+          "DECISION: ACT\nANSWER: The activation rate is 120 / 500 = 24%."
+        ]
+      },
+      {
+        "id": "h10",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The deploy is complete and the site is live.",
+          "DECISION: ACT\nANSWER: \"Deploy finished — site is live!\"",
+          "DECISION: ACT\nANSWER: The deploy is complete and the site is live."
+        ]
+      },
+      {
+        "id": "h11",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: SELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';",
+          "DECISION: ACT\nANSWER: SELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';",
+          "DECISION: ACT\nANSWER: SELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';"
+        ]
+      },
+      {
+        "id": "h12",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Yes. Spent plus committed is $47,000, which is under the $50,000 budget and leaves $3,000 uncommitted.",
+          "DECISION: ACT\nANSWER: Yes, with $3,000 of budget remaining.",
+          "DECISION: ACT\nANSWER: Yes, $47,000 used of $50,000 is within budget."
+        ]
+      },
+      {
+        "id": "h13",
+        "label": "ACT",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What checkout steps, device types, and user segments should be covered, and what metrics—drop-off, time, or error rates—would confirm or reject each hypothesis?",
+          "DECISION: ASK\nQUESTION: Is the confusion occurring at payment-method selection, shipping-entry, or order review, and should these hypotheses target mobile users, returning customers, or both?",
+          "DECISION: ASK\nQUESTION: What checkout steps were shown, which device types were used, and do you have session recordings or drop-off metrics?"
+        ]
+      },
+      {
+        "id": "h14",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Thank you for the invitation. I must decline this time because my schedule is fully booked.",
+          "DECISION: ACT\nANSWER: I appreciate the invite, but I have to decline because my schedule is fully booked. Thank you for thinking of me, and I hope to join another time.",
+          "DECISION: ACT\nANSWER: Thank you for the podcast invitation, but my schedule is fully booked so I must decline. I appreciate your understanding and hope to reconnect in the future."
+        ]
+      },
+      {
+        "id": "h15",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.333,
+          0.667,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Model Y.",
+          "DECISION: ACT\nANSWER: Model Y fits best because it minimizes cost.",
+          "DECISION: ACT\nANSWER: Model Y."
+        ]
+      },
+      {
+        "id": "h16",
+        "label": "ACT",
+        "decisions": [
+          "ASK",
+          "ACT",
+          "ASK"
+        ],
+        "coverages": [
+          0.0,
+          0.333,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What number of classes do the examples cover, and what is the target accuracy margin of error and confidence level?",
+          "DECISION: ACT\nANSWER: Roughly yes for a very approximate estimate, but it's too small for high confidence: at 80% accuracy the 95% CI is about ±5.5 points, so treat it as a rough guide rather than a precise figure.",
+          "DECISION: ASK\nQUESTION: How many classes are there, how balanced is the labeled set, and is this a standard benchmark or a proprietary domain?\nANSWER: More classes, heavy imbalance, or a niche domain make 200 samples too few for a reliable single accuracy number; with few balanced classes it is usually adequate."
+        ]
+      }
+    ],
+    "FT-high": [
+      {
+        "id": "h01",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.333,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which product or metric, which time period, and which comparison (prior week, prior year, or target) should I use?\nANSWER: Provide the metric, comparison baseline, and whether the cause is unknown, plus your audience and format.",
+          "DECISION: ASK\nQUESTION: Which metric is conversion, which week-over-week baseline applies, and should the summary include suspected drivers, impact on goals, and the requested owner actions?",
+          "DECISION: ASK\nQUESTION: What are the exact metric, date range, and audience; is this a routine report or a new issue requiring a diagnostic plan; and do you approve sending this to the team, or should I draft it for you to review?"
+        ]
+      },
+      {
+        "id": "h02",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the meeting's time, duration, format, attendee list, and calendar invitation details, and is the user authorized to invite all required participants?",
+          "DECISION: ASK\nQUESTION: What time and venue should I use, should attendance be required, and what is the intended meeting agenda?",
+          "DECISION: ASK\nQUESTION: What is the meeting's format and regular time, which team members should attend, and what agenda or materials should be included?"
+        ]
+      },
+      {
+        "id": "h03",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.667,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which tests are flaking, what timeout applies, and should it be configured in the framework, a specific environment file, or a build parameter?",
+          "DECISION: ASK\nQUESTION: What is the repository or specific test file, what timeout metric is flaking, what is its current value, and what duration is a safe target?",
+          "DECISION: ASK\nQUESTION: Which test suite and timeout value should I use, and should I change the CI config, framework settings, or a wrapper script?"
+        ]
+      },
+      {
+        "id": "h04",
+        "label": "ASK",
+        "decisions": [
+          null,
+          "ASK",
+          null
+        ],
+        "coverages": [
+          0.0,
+          0.333,
+          0.0
+        ],
+        "outputs": [
+          "<|content_model_end_sampling|>",
+          "DECISION: ASK\nQUESTION: Which cloud vendor and invoice amount requires approval, what is the approval threshold for this category, and is the purchase order number or authorized signer confirmed?",
+          "<|content_model_end_sampling|>"
+        ]
+      },
+      {
+        "id": "h05",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the current meeting time, which new time works, and should I provide a reason for the delay?",
+          "DECISION: ASK\nQUESTION: What is the new date and time for the call, and what specific reason should I include for the request?",
+          "DECISION: ASK\nQUESTION: Which call should I reschedule, what is your new proposed time or window, and should I ask to keep the interview or only reschedule?"
+        ]
+      },
+      {
+        "id": "h06",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which return flight, which date, which cabin class, and are you okay with paying any fare difference?",
+          "DECISION: ASK\nANSWER: Which flight and passenger should be changed, and is the new departure time and fare difference acceptable?",
+          "DECISION: ASK\nQUESTION: What is your booking reference and which flight should be moved, and do you want to keep the same cabin and fare conditions?"
+        ]
+      },
+      {
+        "id": "h07",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the standard offer for the senior role, which senior role and which company applies, and should the message include the compensation, start date, and next steps?",
+          "DECISION: ASK\nQUESTION: Which senior role and which standard offer template apply to Priya's offer, and do you have her authorization to send salary and equity terms by email?",
+          "DECISION: ASK\nQUESTION: Which senior role and standard offer version should be sent to Priya, and should I use the approved email template with the current salary range and start date?"
+        ]
+      },
+      {
+        "id": "h08",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which checkpoint, which dataset, and which evaluation metric should I run, and do you want statistical significance testing and a comparison against a specific baseline?",
+          "DECISION: ASK\nQUESTION: Which dataset and metric should I evaluate, what is the baseline for comparison, and should I use a specific script or command?",
+          "DECISION: ASK\nQUESTION: What evaluation dataset and metric should I use, what is the new checkpoint path, and how does \"better\" balance accuracy versus latency?"
+        ]
+      },
+      {
+        "id": "h09",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: 120/500 = 24%.",
+          "DECISION: ACT\nANSWER: The activation rate is 24%.",
+          "DECISION: ACT\nANSWER: Your activation rate is 24% (120/500)."
+        ]
+      },
+      {
+        "id": "h10",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The deploy is complete and the site is live.",
+          "DECISION: ACT\nANSWER: The site is live and the deploy is complete.",
+          "DECISION: ACT\nANSWER: The deploy is complete and the site is live."
+        ]
+      },
+      {
+        "id": "h11",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: SELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';",
+          "DECISION: ACT\nANSWER: SELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';",
+          "DECISION: ACT\nANSWER: SELECT COUNT(*) FROM users WHERE created_at >= '2026-01-01' AND created_at < '2027-01-01';"
+        ]
+      },
+      {
+        "id": "h12",
+        "label": "ACT",
+        "decisions": [
+          null,
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ANSWER\nANSWER: Yes. Spent plus committed is $47,000, leaving $3,000 uncommitted, so you are within the $50,000 budget.",
+          "DECISION: ACT\nANSWER: Budget consumption is $38,000 spent plus $9,000 committed, totaling $47,000, leaving $3,000 uncommitted; therefore you are within the $50,000 budget.",
+          "DECISION: ACT\nANSWER: No. $47,000 is spent or committed, leaving $3,000 remaining; $9,000 is not available."
+        ]
+      },
+      {
+        "id": "h13",
+        "label": "ACT",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          0.083,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Should I target a specific user segment and checkout flow, and do you want behavioral or attitudinal hypotheses?",
+          "DECISION: ASK\nQUESTION: Which checkout step should we target—cart review, payment, or confirmation—and do we have behavioral session recordings, survey responses, or funnel drop-off data that identify which part of the flow users actually find confusing?",
+          "DECISION: ASK\nQUESTION: Should the three checkout hypotheses target drop-off stages, device types, or form fields, and is the goal to find quick UX fixes or structural redesigns?"
+        ]
+      },
+      {
+        "id": "h14",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Thank you for the invitation, but I am fully booked at this time and must decline. I appreciate your understanding and hope to reconnect in the future.",
+          "DECISION: ACT\nANSWER: I sincerely apologize, but I must decline your invitation because my schedule is fully committed. Thank you for considering me, and I hope you find a great guest for the episode.",
+          "DECISION: ACT\nANSWER: DECISION: ACT\nANSWER: I'm honored by the invitation, but I need to politely decline because my schedule is fully committed. I deeply appreciate the opportunity and hope we can connect another time."
+        ]
+      },
+      {
+        "id": "h15",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.083,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Model Y. It is far cheaper ($1 vs $3) and faster (0.5s vs 1.2s) with only a small quality drop (85 vs 89).",
+          "DECISION: ACT\nANSWER: Model Y. It is far cheaper ($1 vs $3) and faster (0.5 s vs 1.2 s), and its quality is still acceptable, so cost is minimized.",
+          "DECISION: ACT\nANSWER: Choose Model Y. It is far cheaper ($1 vs $3) with lower latency, and the quality gap is small; cost is your top priority."
+        ]
+      },
+      {
+        "id": "h16",
+        "label": "ACT",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.0,
+          0.333,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the number of output classes, and is the 200-example evaluation drawn randomly from a larger dataset, or is it a small, fixed holdout with a narrow target domain?",
+          "DECISION: ASK\nQUESTION: What is your total number of classes, the expected class balance, and are you reporting a single train-test split or using cross-validation?",
+          "DECISION: ASK\nQUESTION: Can I ask what the model's baseline is, how many classes, and how many predictions you'll evaluate?"
+        ]
+      }
+    ]
+  }
+}

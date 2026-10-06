@@ -1,0 +1,1578 @@
+{
+  "metrics": {
+    "Base-low": {
+      "decision_accuracy": 100.0,
+      "clarification_recall": 100.0,
+      "autonomy_rate": 100.0,
+      "consistency": 100.0,
+      "rubric_coverage_approx": 0.461,
+      "format_failures": 0,
+      "over_asking_samples": 0,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 0
+    },
+    "Base-high": {
+      "decision_accuracy": 100.0,
+      "clarification_recall": 100.0,
+      "autonomy_rate": 100.0,
+      "consistency": 100.0,
+      "rubric_coverage_approx": 0.45,
+      "format_failures": 0,
+      "over_asking_samples": 0,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 0
+    },
+    "FT-low": {
+      "decision_accuracy": 100.0,
+      "clarification_recall": 100.0,
+      "autonomy_rate": 100.0,
+      "consistency": 100.0,
+      "rubric_coverage_approx": 0.454,
+      "format_failures": 0,
+      "over_asking_samples": 0,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 0
+    },
+    "FT-high": {
+      "decision_accuracy": 100.0,
+      "clarification_recall": 100.0,
+      "autonomy_rate": 100.0,
+      "consistency": 100.0,
+      "rubric_coverage_approx": 0.457,
+      "format_failures": 0,
+      "over_asking_samples": 0,
+      "under_asking_samples": 0,
+      "over_asking_prompts_majority": 0
+    }
+  },
+  "raw": {
+    "Base-low": [
+      {
+        "id": "eval_001",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich product/metric and quarter are you referring to, and what data sources (e.g., analytics, surveys, campaigns) should I use to explain the improvement?",
+          "DECISION: ASK\n\nWhich product/metric and quarter do you mean, and what data sources (e.g., analytics, surveys, campaigns) should I use to explain the improvement?",
+          "DECISION: ASK\n\nWhich product/team and which engagement metric (e.g., DAU, retention, time-in-app) are you referring to, and do you have the relevant data (e.g., feature launches, campaigns, seasonality) to analyze?"
+        ]
+      },
+      {
+        "id": "eval_002",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.333,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nEngagement rate 1: 80,000 / 200,000 = 40.0%. Engagement rate 2: 92,000 / 230,000 = 40.0%. The engagement rate did not improve; it stayed flat.",
+          "DECISION: ACT\n\nPeriod 1: 80,000 / 200,000 = 40.0%. Period 2: 92,000 / 230,000 = 40.0%. Engagement rate did not improve; it stayed flat.",
+          "DECISION: ACT\n\nPeriod 1 engagement rate: 80,000 / 200,000 = 40.0%\nPeriod 2 engagement rate: 92,000 / 230,000 = 40.0%\n\nEngagement rate did not improve; it stayed the same."
+        ]
+      },
+      {
+        "id": "eval_003",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich Friday, what time afternoon, and what type of follow-up (meeting/call)? Also confirm which Alex and whether you authorize sending the invite.",
+          "DECISION: ASK\n\nWhich Alex (full name/contact), what specific time/format (call/meeting), topic/purpose, and do you authorize me to send the calendar invite or message?",
+          "DECISION: ASK\n\nWhich Alex (full name/contact), what time and format (call/meeting/email), purpose/topic, and do you have authorization to schedule on their calendar?"
+        ]
+      },
+      {
+        "id": "eval_004",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nTitle: Model-Evaluation Pilot Follow-Up — Alex Chen (Fri 3:00 PM PT, 30 min)\n\nAgenda:\n1. Pilot findings review (findings, metrics, issues)\n2. Go/no-go criteria and next-step decision",
+          "DECISION: ACT\n\nTitle: Model-Evaluation Pilot Follow-Up — Alex Chen (Fri 3:00 PM PT, 30 min)\n\nAgenda:\n1. Pilot findings review\n2. Go / no-go criteria and next steps",
+          "DECISION: ACT\n\nTitle: Model-Evaluation Pilot — Follow-Up (Alex Chen)\nAgenda (30 min, Fri 3:00 PM PT):\n1. Pilot findings review (15 min)\n2. Go/no-go criteria and next steps (15 min)"
+        ]
+      },
+      {
+        "id": "eval_005",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.0,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich city are you departing from, what dates/times do you need, and which London airport and budget range should I use?",
+          "DECISION: ASK\n\nWhat is your departure city and date/time, which London airport (Heathrow, Gatwick, Stansted, Luton, City), and do you need a specific budget or class (economy/business)?",
+          "DECISION: ASK\n\nWhat city are you departing from, what dates/times work, what is your budget, and do you need a one-way or round-trip to a specific London airport?"
+        ]
+      },
+      {
+        "id": "eval_006",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.167,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHotel B ($210/night, 1.2 miles, free cancellation) is the only option that satisfies both conditions: it’s within 1.5 miles and offers free cancellation, and it’s cheaper than Hotel A. Hotel C is excluded by distance.",
+          "DECISION: ACT. The cheapest hotel within 1.5 miles with free cancellation is Hotel B at $210/night (1.2 miles away).",
+          "DECISION: ACT\nHotel B ($210, 1.2 miles, free cancellation) is the only option within 1.5 miles that offers free cancellation."
+        ]
+      },
+      {
+        "id": "eval_007",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nWhich pipeline (system/repo), what error/symptom, and do you authorize changes in which environment (e.g., prod, staging)?",
+          "DECISION: ASK\n\nWhich pipeline (repo/system/CI) is broken, what error or stage is failing, and do you have authorization to modify it and deploy to which environment?",
+          "DECISION: ASK\n\nWhich pipeline (repo/system/CI), what error/logs indicate the break, and do you authorize me to modify/deploy it?"
+        ]
+      },
+      {
+        "id": "eval_008",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nThe delays before attempts 2–5 are 1, 2, 4, and 8 seconds, so total waiting time is 1 + 2 + 4 + 8 = 15 seconds.",
+          "DECISION: ACT\n\nThe delays before attempts 2–5 are 1, 2, 4, and 8 seconds, so total waiting time before the fifth attempt is 1 + 2 + 4 + 8 = 15 seconds.",
+          "DECISION: ACT\n\nThe waits before attempts 2–5 are 1, 2, 4, and 8 seconds, so total waiting time before the fifth attempt is 1 + 2 + 4 + 8 = 15 seconds."
+        ]
+      },
+      {
+        "id": "eval_009",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhat are your priorities (quality vs latency/cost) and what task/domain is this for (e.g., coding, reasoning, chat)? Also, which specific models do \"Inkling\" and \"Inkling-Small\" refer to in your setup?",
+          "DECISION: ASK\n\nWhat is the task (e.g., reasoning, coding, summarization), and what are the priorities (accuracy vs. speed/cost vs. hardware limits)?",
+          "DECISION: ASK\n\nWhat is the task (e.g., reasoning, coding, chat), and which factors matter most (accuracy, latency, cost, context length)?"
+        ]
+      },
+      {
+        "id": "eval_010",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nInkling-Small qualifies: score 86 (≥85), latency 0.8 s (<1 s), cost $1.20 (<$2). Inkling fails latency (2.4 s) and cost ($4.00).",
+          "DECISION: ACT\n\nInkling-Small qualifies (score 86 ≥ 85, latency 0.8 s < 1 s, cost $1.20 < $2); Inkling fails latency and cost.",
+          "DECISION: ACT\n\nInkling-Small qualifies: score 86 (≥85), latency 0.8s (<1s), cost $1.20 (<$2). Inkling fails latency (2.4s) and cost ($4.00)."
+        ]
+      },
+      {
+        "id": "eval_011",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.417,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nWhat model/task, which training data, and what success criteria/metrics should be used to test it?",
+          "DECISION: ASK\n\nWhat model/task and dataset are you testing, and what success criteria (e.g., loss, accuracy, inference output) should I use—plus do you have authorization/access to run this evaluation?",
+          "DECISION: ASK\n\nWhat training data, model/task, and evaluation metric should be used, and do you have access/authorization to run the test?"
+        ]
+      },
+      {
+        "id": "eval_012",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nPrimary comparison: pass@1 on the fixed 300-task tool-use benchmark between checkpoint A (50k existing data) and checkpoint B (50k + 5k curated tool-use examples), holding training tokens, optimizer, and compute constant.",
+          "DECISION: ACT\nPrimary comparison: pass@1 on the fixed 300-task tool-use benchmark between checkpoint A (50k existing data) and checkpoint B (50k + 5k curated tool-use examples), holding tokens, optimizer, and compute constant to isolate the impact of the added curated examples.",
+          "DECISION: ACT\n\nThe primary comparison is pass@1 on the fixed 300-task tool-use benchmark between checkpoint A (50,000-example dataset) and checkpoint B (same dataset plus 5,000 curated tool-use examples), with training tokens, optimizer, and compute held constant."
+        ]
+      },
+      {
+        "id": "eval_013",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich Priya (contact info/role) should I message, what exactly should the message say, and do you authorize me to contact her externally?",
+          "DECISION: ASK\n\nWho are you (so I can relay the message correctly), what specifically should I tell Priya, and how should I contact her (e.g., email, chat, phone)?",
+          "DECISION: ASK\n\nWhich Priya should be contacted, what exact message should I relay (\"that works for me\"), and through which channel (email, chat, SMS)?"
+        ]
+      },
+      {
+        "id": "eval_014",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHere is a warm two-sentence reply:\n\n\"Hi Priya, I’d love to meet Monday at 11:00 AM Pacific—your proposal sounds perfect. I’ll send the evaluation memo beforehand so we’re all set to dive in.\"",
+          "DECISION: ACT\n\nHere is a warm two-sentence reply:\n\n\"Hi Priya, I’d love to meet Monday at 11:00 AM Pacific—thank you for proposing this. I’ll send the evaluation memo beforehand so we’re all set to dive right in.\"",
+          "DECISION: ACT\n\nHere is a warm two-sentence reply: \"Hi Priya, I’d love to meet Monday at 11:00 AM Pacific—thank you for proposing it. I’ll send the evaluation memo beforehand so we’re all set to dive in.\""
+        ]
+      },
+      {
+        "id": "eval_015",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich product and which collaboration features (e.g., real-time editing, comments, sharing, chat) should be added, and do you have authorization to modify it?",
+          "DECISION: ASK\n\nWhat product and which collaboration features (e.g., real-time editing, comments, shared access) are needed, and what is the scope/target platform?",
+          "DECISION: ASK\n\nWhich product and which collaboration features (e.g., real-time editing, comments, sharing, video) are needed, and do you have authorization to specify the target scope and users?"
+        ]
+      },
+      {
+        "id": "eval_016",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nA: 800/4 = 200 users/week. B: 450/1.5 = 300 users/week. C: 300/1 = 300 users/week.\n\nRanking by expected activated users per engineering week: B = C > A (B and C tied at 300; A at 200).",
+          "DECISION: ACT\n\nEfficiency (users/week): B = 300, C = 300, A = 200. Ranking: B = C > A. If tie-break needed, specify; otherwise B and C tie for highest.",
+          "DECISION: ACT\n\nExpected activated users per engineering week: A = 200, B = 300, C = 300. Ranking: B = C > A (B and C tie; if breaking ties, B slightly higher total impact per week is equal)."
+        ]
+      },
+      {
+        "id": "eval_017",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich contract are you referring to, and what criteria (e.g., price, terms, risk, legal jurisdiction, or counterparties) should I use to evaluate whether it is a good deal?",
+          "DECISION: ASK\n\nWhich contract are you referring to (please share the text or key terms), and what are your goals/risks (e.g., cost, liability, termination rights)? Also, do you want legal advice or just a general business evaluation?",
+          "DECISION: ASK\n\nWhich contract are you referring to (please share the text or key terms), and what criteria define \"good\" for you (e.g., price, risk, legal protections, comparison to alternatives)?"
+        ]
+      },
+      {
+        "id": "eval_018",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nVendor A: $40,000 + ($8 × 10,000) = $120,000. Vendor B: $105,000. Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\n\nVendor A: $40,000 + ($8 × 10,000) = $120,000. Vendor B: $105,000. Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\n\nVendor A: $40,000 + ($8 × 10,000) = $120,000. Vendor B: $105,000. Vendor B is cheaper by $15,000."
+        ]
+      },
+      {
+        "id": "eval_019",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich Jordan (full name/ID/record), which final interview (job/role/stage), and do you authorize this change?",
+          "DECISION: ASK\n\nWhich Jordan (full name/ID) and which system/record should be updated, and do you have authorization to make this change?",
+          "DECISION: ASK\n\nWhich Jordan (full name/ID) and which system/record should be updated, and do you have authorization to make this change?"
+        ]
+      },
+      {
+        "id": "eval_020",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.5,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nJordan’s average is (5+4+3+4)/4 = 4.0, meeting the threshold, and the lowest score is 3, so no competency is below 3. Jordan qualifies for the final interview.",
+          "DECISION: ACT\n\nJordan Lee’s average is (5+4+3+4)/4 = 4.0, and the lowest score is 3 (not below 3). He meets both criteria, so he qualifies for the final interview.",
+          "DECISION: ACT\n\nJordan’s average is (5+4+3+4)/4 = 4.0, and the lowest score is 3, meeting the “no competency below 3” rule. He qualifies for the final interview."
+        ]
+      }
+    ],
+    "Base-high": [
+      {
+        "id": "eval_001",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich engagement metric and product/quarter are you referring to (e.g., user DAU, retention, employee survey scores), and what data or context (analytics, campaigns, seasonality, product releases) should I use to explain the improvement?",
+          "DECISION: ASK\n\nWhich product or platform’s engagement metric (e.g., DAU, session length, click-through rate) improved in which quarter, and do you want me to analyze specific drivers (e.g., feature launches, campaigns, seasonality) from a particular dataset or report?",
+          "DECISION: ASK\n\nWhich product/engagement metric (e.g., DAU, retention, session time) and time period are you referring to, and do you have specific data sources or hypotheses (feature releases, campaigns, seasonality) to review, or should I provide general possible drivers?"
+        ]
+      },
+      {
+        "id": "eval_002",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          0.75,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nPeriod 1 engagement rate: 80,000 / 200,000 = 40.0%  \nPeriod 2 engagement rate: 92,000 / 230,000 = 40.0%\n\nEngagement rate did not improve; it stayed the same at 40%.",
+          "DECISION: ACT\n\nEngagement rate = WAU / eligible users.\n\n- Period 1: 80,000 / 200,000 = 40.0%\n- Period 2: 92,000 / 230,000 = 40.0%\n\nThe engagement rate did not improve; it stayed exactly the same (40%).",
+          "DECISION: ACT\n\nPeriod 1: 80,000 / 200,000 = 40.0%\nPeriod 2: 92,000 / 230,000 = 40.0%\n\nEngagement rate did not improve; it stayed flat at 40%."
+        ]
+      },
+      {
+        "id": "eval_003",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich Alex (name/contact), what specific time Friday afternoon, and what format (call/meeting/email) should the follow-up take—since I lack access to your calendar or external scheduling tools to set it up directly?",
+          "DECISION: ASK\n\nWhich Alex, what time Friday afternoon, what kind of follow-up (call/meeting/topic), and which Friday—should I send a calendar invite or just remind you?",
+          "DECISION: ASK\n\nWhich Alex (full name/contact), what time Friday afternoon, what format (call/meeting/email), and which calendar or tool should I use to schedule it?"
+        ]
+      },
+      {
+        "id": "eval_004",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          1.0,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\n\n**Meeting:** Model-Evaluation Pilot — Findings & Go/No-Go Review  \n**When:** Friday 3:00 PM Pacific (30 min)  \n**With:** Alex Chen  \n\n**Agenda**\n1. **Pilot findings recap** — Key results, metrics, and issues from the model-evaluation pilot (15 min).\n2. **Go/no-go criteria & decision** — Confirm thresholds, assess readiness, and define next steps if approved (15 min).",
+          "DECISION: ACT\n\n**Title:** Model-Evaluation Pilot Follow-Up — Findings & Go/No-Go (Fri 3:00 PM PT, 30 min)\n\n**Agenda**\n1. **Pilot findings review** — summarize results, metrics, and issues from the model-evaluation run (15 min)\n2. **Go/no-go criteria & next steps** — confirm decision thresholds, risks, and whether to proceed, pivot, or halt (15 min)",
+          "DECISION: ACT\n\nTitle: Model-Evaluation Pilot — Friday Follow-Up with Alex Chen (30 min)\n\nAgenda (3:00 PM PT, Friday):\n1. Pilot findings review — key results, issues, and metrics from the evaluation run (15 min)\n2. Go / no-go criteria — confirm thresholds, decision framework, and next-step recommendations (15 min)"
+        ]
+      },
+      {
+        "id": "eval_005",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich city will you depart from, what are your travel dates (and do you need a return), which London airport is preferred, and what price range or cabin class counts as reasonable?",
+          "DECISION: ASK\n\nWhat city are you departing from, what are your travel dates (and return, if any), and do you have a preferred London airport or budget range for a \"reasonable\" flight?",
+          "DECISION: ASK\n\nWhat city will you depart from, what are your travel dates and preferred London airport, and is \"reasonable\" a specific budget or cabin class?"
+        ]
+      },
+      {
+        "id": "eval_006",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.167,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHotel B ($210, 1.2 miles, free cancellation) is the only option that is both within 1.5 miles and offers free cancellation; Hotel A is nonrefundable and Hotel C is too far. Choose Hotel B.",
+          "DECISION: ACT\n\nOnly Hotel B meets both conditions: it is within 1.5 miles (1.2 miles) and offers free cancellation. At $210/night, it is also the only qualifying option.\n\nChoose **Hotel B**.",
+          "DECISION: ACT\n\nThe criteria are: (1) within 1.5 miles of the venue, and (2) free cancellation; then pick the cheapest that satisfies both.\n\n- Hotel A: 0.3 miles (passes distance), but nonrefundable (fails).\n- Hotel B: 1.2 miles (passes), free cancellation (passes), $210.\n- Hotel C: 3 miles (fails distance), free cancellation (passes), $195.\n\nOnly Hotel B meets both conditions.\n\nAnswer: **Hotel B** at $210 per night."
+        ]
+      },
+      {
+        "id": "eval_007",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich pipeline (e.g., repo/CI system/job name) and failure mode (logs/error) should I target, and do you authorize me to edit its config/code directly or should I provide a fix for you to apply?",
+          "DECISION: ASK\n\nWhich pipeline (system/repo/job name), what specific error or symptom indicates it is broken, and do you have authorization/access for me to modify it directly or should I provide repair steps?",
+          "DECISION: ASK\nWhich pipeline (CI/CD, data/ML, etc.) and environment (GitHub Actions, Jenkins, Airflow, etc.) is broken, what specific failure or error message are you seeing, and do you have authorization and access to modify it?"
+        ]
+      },
+      {
+        "id": "eval_008",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nThe delays before the 2nd, 3rd, 4th, and 5th attempts are 1, 2, 4, and 8 seconds, so the total waiting time is 1 + 2 + 4 + 8 = **15 seconds**.",
+          "DECISION: ACT\n\nThe delays before attempts 2–5 are 1 s, 2 s, 4 s, and 8 s.\n\nTotal waiting time = 1 + 2 + 4 + 8 = **15 seconds**.",
+          "DECISION: ACT\n\nThe delays before attempts 2–5 are 1, 2, 4, and 8 seconds, so the total waiting time is 1 + 2 + 4 + 8 = **15 seconds**."
+        ]
+      },
+      {
+        "id": "eval_009",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhat task and constraints (latency, cost, accuracy, hardware) matter for your choice, and do you mean Thinking Machines Lab's Inkling versus a specific smaller/distilled \"Inkling-Small\" variant or a different provider's models?",
+          "DECISION: ASK\nWhat is your specific use case (e.g., reasoning, coding, long-context) and which constraints—such as latency, cost, or accuracy—matter most when comparing Inkling and Inkling-Small?",
+          "DECISION: ASK\n\nWhat is the use case (e.g., reasoning, coding, summarization), and what are your key constraints (latency, cost, accuracy, or hardware limits) that would favor one over the other?"
+        ]
+      },
+      {
+        "id": "eval_010",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nInkling-Small meets all three requirements (86 ≥ 85, 0.8 s < 1 s, $1.20 < $2.00). Inkling fails latency and cost constraints. Only **Inkling-Small** qualifies.",
+          "DECISION: ACT\n\nInkling-Small qualifies (86 ≥ 85, 0.8 s < 1 s, $1.20 < $2). Inkling fails latency and cost constraints.",
+          "DECISION: ACT\n\nInkling-Small qualifies: score 86 (≥85), latency 0.8 s (<1 s), cost $1.20 (<$2). Inkling fails latency and cost requirements."
+        ]
+      },
+      {
+        "id": "eval_011",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.0,
+          0.083,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich specific dataset/model pipeline defines the \"new training data,\" what success criteria (e.g., loss convergence, accuracy, error rate) determine it \"works,\" and do you authorize me to execute the training/test job here?",
+          "DECISION: ASK\n\nWhat model/task and evaluation metrics should I use, and do you have authorization/access to the specific training dataset and test environment needed to run this validation?",
+          "DECISION: ASK\n\nWhich dataset/file and model/task should be tested, what metric defines \"works\" (e.g., validation loss, accuracy, inference quality), and should I execute a test script directly or just propose steps?"
+        ]
+      },
+      {
+        "id": "eval_012",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nThe primary comparison is the **pass@1 score on the fixed 300-task tool-use benchmark** between Checkpoint A (trained on the 50,000-example dataset) and Checkpoint B (same initialization, same optimizer/compute/training tokens, but on the 50,000-example dataset plus 5,000 curated tool-use examples). This isolates the causal effect of **data composition** (adding curated tool-use examples) versus holding total training tokens, compute, and initialization constant.",
+          "DECISION: ACT\nPrimary comparison: Checkpoint A (50,000-example baseline) versus Checkpoint B (same initialization, 50,000 + 5,000 curated tool-use examples), evaluated by pass@1 on the fixed 300-task tool-use benchmark, with training tokens, optimizer, and compute held constant to isolate the effect of adding the curated tool-use data.",
+          "DECISION: ACT\n\nPrimary comparison: Checkpoint A (trained on the existing 50,000-example dataset) versus Checkpoint B (trained from the same initialization on the existing dataset plus 5,000 curated tool-use examples), isolating the impact of the additional 5,000 examples by holding training tokens, optimizer, and compute constant; evaluated by pass@1 on the fixed 300-task tool-use benchmark."
+        ]
+      },
+      {
+        "id": "eval_013",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWho is Priya (contact/identifier) and how should I reach her, and what exactly should I say—does \"works for me\" mean a solution works for you or that she works for you?",
+          "DECISION: ASK\n\nWhich Priya (name/contact or platform) should I message, and what specific content or request should I relay to her (since \"that works for me\" is unclear)?",
+          "DECISION: ASK\n\nWho is Priya (contact method/role), and what specifically should I tell her \"works for me\" (e.g., a proposal, schedule, or plan)?"
+        ]
+      },
+      {
+        "id": "eval_014",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nHi Priya, I’d be delighted to meet Monday at 11:00 AM Pacific—thank you for putting this together. I’ll send the evaluation memo beforehand so we’re both ready to dive in.",
+          "DECISION: ACT\n\nHi Priya, I’d love to meet Monday at 11:00 AM Pacific—thank you for proposing it. I’ll send the evaluation memo beforehand so we can make the most of our time together.",
+          "DECISION: ACT\n\nHi Priya, I’d be delighted to meet Monday at 11:00 AM Pacific—your proposal sounds wonderful. I’ll send the evaluation memo beforehand so we’re all set to make the most of our time together."
+        ]
+      },
+      {
+        "id": "eval_015",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          0.75,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich product/platform should be modified, what collaboration capabilities are needed (e.g., real-time co-editing, comments, shared workspaces, messaging), and do you have authorization/requirements for the target users and tech stack?",
+          "DECISION: ASK\n\nWhich product and platform are you targeting, what specific collaboration features (e.g., real-time editing, comments, shared access, chat) do you need, and do you have authorization/requirements for the scope (frontend, backend, API, permissions model)?",
+          "DECISION: ASK\n\nWhich product and platform (e.g., web app, mobile, specific codebase) should be modified, what collaboration capabilities (e.g., real-time editing, comments, sharing/permissions) are needed, and do you have authorization/access to implement them?"
+        ]
+      },
+      {
+        "id": "eval_016",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nCompute activated users per engineering week:\n\n- A: 800 / 4 = 200/week\n- B: 450 / 1.5 = 300/week\n- C: 300 / 1 = 300/week\n\nRanking (highest to lowest): **B = C > A** (B and C tie at 300/week; A is 200/week).",
+          "DECISION: ACT\n\nExpected activated users per engineering week:\n- A: 800 / 4 = 200\n- B: 450 / 1.5 = 300\n- C: 300 / 1 = 300\n\nRanking: B and C tied for first (300/week), then A (200/week). If you need a strict order, B and C are equal; break ties by risk, confidence, or strategic fit.",
+          "DECISION: ACT\n\nRates: A = 800/4 = 200 users/week; B = 450/1.5 = 300 users/week; C = 300/1 = 300 users/week.\n\nRanking: B and C tied (300/week), then A (200/week). If strict ordering needed, B = C > A."
+        ]
+      },
+      {
+        "id": "eval_017",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhat contract are you referring to (e.g., employment, service, purchase, lease), and what are the key terms and your primary goals or concerns (e.g., price, liability, duration, exit rights)? Also, may I review the actual text or a summary of its clauses?",
+          "DECISION: ASK\n\nWhich contract are you referring to, and can you share its key terms (e.g., pricing, obligations, termination, liability, and duration) so I can evaluate whether it’s a good deal?",
+          "DECISION: ASK\n\nWhich contract are you referring to, and what are its key terms (e.g., price, obligations, duration, risks, and your role/goal)—so I can assess whether it’s favorable for your situation?"
+        ]
+      },
+      {
+        "id": "eval_018",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nVendor A: $40,000 + ($8 × 10,000) = $120,000. Vendor B: $105,000. Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\n\nVendor A total: $40,000 + ($8 × 10,000) = $120,000. Vendor B: $105,000. Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\n\nVendor A total: $40,000 + ($8 × 10,000) = $120,000. Vendor B: $105,000. Vendor B is cheaper by $15,000."
+        ]
+      },
+      {
+        "id": "eval_019",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.0,
+          0.083,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ASK\n\nWhich Jordan (candidate ID/name) and which recruiting pipeline/system should be updated, and do you authorize me to change their stage to final interview?",
+          "DECISION: ASK\n\nWhich Jordan (name/email/ID) and which system or hiring pipeline should I move to the final interview stage, and do you have authorization to update that record?",
+          "DECISION: ASK\n\nWhich Jordan (full name or ID) should be moved, and in which hiring system or pipeline should they be advanced to the final interview stage?"
+        ]
+      },
+      {
+        "id": "eval_020",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\n\nJordan’s scores are 5, 4, 3, and 4.\n\n- Average: (5 + 4 + 3 + 4) / 4 = 16 / 4 = 4.0\n- Minimum competency: 3, which meets the “no competency below 3” rule (3 is not below 3).\n\nBoth conditions are satisfied.\n\n**Jordan qualifies for the final interview.**",
+          "DECISION: ACT\n\nJordan’s average is (5 + 4 + 3 + 4) / 4 = 4.0, and the lowest score is 3, which meets the “no competency below 3” rule. Therefore, Jordan qualifies for the final interview.",
+          "DECISION: ACT\n\nJordan’s scores: 5, 4, 3, 4. Average = 16/4 = 4.0. Minimum = 3, which satisfies “no competency below 3.” Both conditions met, so Jordan qualifies for the final interview."
+        ]
+      }
+    ],
+    "FT-low": [
+      {
+        "id": "eval_001",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          1.0,
+          0.667,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which engagement metric and time period should I examine, and what data sources and recent changes should I consider?",
+          "DECISION: ASK\nQUESTION: Which engagement metric improved, how much, and where, and can you provide the underlying data and any external factors that could explain the change?",
+          "DECISION: ASK\nQUESTION: Which engagement metric changed, and what are the reported drivers and corroborating behavioral or qualitative evidence?"
+        ]
+      },
+      {
+        "id": "eval_002",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.333,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Engagement rose from 40% to 40%. The rate did not improve; it stayed flat.",
+          "DECISION: ACT\nANSWER: Period 1: 40%. Period 2: 40%. Engagement rate was unchanged; it did not improve.",
+          "DECISION: ACT\nANSWER: The engagement rate stayed the same at 40%. Period 1: 80,000 / 200,000 = 40%. Period 2: 92,000 / 230,000 = 40%. It did not improve."
+        ]
+      },
+      {
+        "id": "eval_003",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What time and time zone should the meeting start, how long should it run, where is Alex located, and what is the agenda?",
+          "DECISION: ASK\nQUESTION: Which Friday and what time, and should I propose a meeting, send a reminder, or ask Alex to confirm?",
+          "DECISION: ASK\nQUESTION: What time and duration should I schedule, and should I include a video link and agenda?"
+        ]
+      },
+      {
+        "id": "eval_004",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Subject: Model-evaluation pilot follow-up — findings and go/no-go criteria\nAgenda:\n1. Pilot findings and observations (15 min)\n2. Go/no-go criteria and next steps (15 min)",
+          "DECISION: ACT\nANSWER: ANSWER: Title: Model-Evaluation Pilot Follow-Up\nAgenda: 1) Review pilot findings, 2) Confirm go/no-go criteria and decision.",
+          "DECISION: ACT\nANSWER: Title: Model-Evaluation Pilot Follow-Up\nAgenda\n1. Pilot findings and key observations (15 minutes)\n2. Go/no-go criteria and recommendation (15 minutes)"
+        ]
+      },
+      {
+        "id": "eval_005",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.0,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is your departure city, available travel dates, budget, and any airline or airport preferences?",
+          "DECISION: ASK\nQUESTION: What is your departure city and interview date, and do you prefer a specific airport or arrival time?",
+          "DECISION: ASK\nQUESTION: When and where is the interview, which London airport is best, and what are your budget, preferred departure airport, and travel constraints?"
+        ]
+      },
+      {
+        "id": "eval_006",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Hotel B. It is the only option within 1.5 miles that offers free cancellation.",
+          "DECISION: ACT\nANSWER: Choose Hotel B. It is the only option that satisfies both conditions: it is within 1.5 miles and offers free cancellation.",
+          "DECISION: ACT\nANSWER: Hotel B."
+        ]
+      },
+      {
+        "id": "eval_007",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which pipeline and repository are affected, what failure message or log snippet appeared, and which branch and deployment window should I target?",
+          "DECISION: ASK\nQUESTION: Which pipeline and repository are affected, what error message or failing stage occurred, and which branch is the next run targeting?",
+          "DECISION: ASK\nQUESTION: Which pipeline, which error message or log, which environment, and which change must be preserved or restored?"
+        ]
+      },
+      {
+        "id": "eval_008",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The total is 15 seconds: 1 + 2 + 4 + 8 = 15.",
+          "DECISION: ACT\nANSWER: The total delay is 15 seconds: 1 + 2 + 4 + 8 = 15.",
+          "DECISION: ACT\nANSWER: The waits are 1, 2, 4, and 8 seconds, totaling 15 seconds."
+        ]
+      },
+      {
+        "id": "eval_009",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.667,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the task, deployment constraints, quality requirements, and latency budget, and can I benchmark both?",
+          "DECISION: ASK\nQUESTION: Which tasks will it serve, what are the latency and quality targets, and what is the budget and hardware?",
+          "DECISION: ASK\nQUESTION: What is the task, and what are your latency, accuracy, cost, and deployment requirements?"
+        ]
+      },
+      {
+        "id": "eval_010",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Only Inkling-Small qualifies, meeting the score, latency, and cost requirements.",
+          "DECISION: ACT\nANSWER: Inkling-Small qualifies. It meets the score floor (86), latency ceiling (0.8s), and cost ceiling ($1.20). Inkling fails latency and cost constraints.",
+          "DECISION: ACT\nANSWER: Only Inkling-Small qualifies. It meets all three constraints (86 ≥ 85, 0.8 s < 1 s, $1.20 < $2), while Inkling fails latency and cost."
+        ]
+      },
+      {
+        "id": "eval_011",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which training dataset, model, and evaluation criteria should I use, and what success threshold defines working?",
+          "DECISION: ASK\nQUESTION: What is the specific objective and dataset, and should I design the evaluation or just provide an example test script?",
+          "DECISION: ASK\nQUESTION: Which dataset, model, metric and access can I use to design a quick, safe validation?"
+        ]
+      },
+      {
+        "id": "eval_012",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The comparison is pass@1 on the fixed 300-task tool-use benchmark between checkpoint A and checkpoint B, isolating the impact of adding 5,000 curated tool-use examples.",
+          "DECISION: ACT\nANSWER: The primary comparison is whether adding 5,000 curated tool-use examples improves pass@1 on the fixed 300-task benchmark versus training on only the existing 50,000 examples, with all other training factors held constant.",
+          "DECISION: ACT\nANSWER: The primary comparison is the pass@1 accuracy of checkpoint B versus checkpoint A on the fixed 300-task tool-use benchmark."
+        ]
+      },
+      {
+        "id": "eval_013",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What did Priya do, and how do you want me to respond, such as defending her, correcting the speaker, or clarifying her role?",
+          "DECISION: ASK\nQUESTION: Which Priya do you mean and what should the message say?",
+          "DECISION: ASK\nQUESTION: Which Priya and which company, and what is the message?"
+        ]
+      },
+      {
+        "id": "eval_014",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: I would be delighted to meet Monday at 11:00 AM Pacific. I will send the evaluation memo beforehand so we can review it together.",
+          "DECISION: ACT\nANSWER: I'm delighted to meet Monday at 11:00 AM Pacific. I'll send the evaluation memo beforehand so we're fully prepared to discuss it.",
+          "DECISION: ACT\nANSWER: I’m so glad you can meet Monday; 11:00 AM Pacific works perfectly for me. I’ll send over the evaluation memo beforehand so we can make the most of our time."
+        ]
+      },
+      {
+        "id": "eval_015",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.75,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which product and user roles should the collaboration features serve, what collaboration actions are needed, and which external systems must the feature integrate with?",
+          "DECISION: ASK\nQUESTION: What collaboration problem should the feature solve, which users and roles are involved, which platform and access levels matter, and which outcomes signal success?",
+          "DECISION: ASK\nQUESTION: What specific collaboration features are needed, who are the users, and what are the security and integration constraints?"
+        ]
+      },
+      {
+        "id": "eval_016",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.667,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Per-engineer-week yield: C 300, B 300, A 200. Rank: C = B, then A. If forced, C and B tie; A is lowest.",
+          "DECISION: ACT\nANSWER: B yields about 300 activated users per engineering week, A about 200, and C about 300—essentially tied with B—so prioritize B (and C if comparable risk and maintenance).",
+          "DECISION: ACT\nANSWER: B yields ~300 activated users per week, followed by C at 300 and A at 200, so rank B > C > A."
+        ]
+      },
+      {
+        "id": "eval_017",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What contract is being evaluated, what are the governing terms and obligations, what are your objectives and risk limits, and what comparable alternatives exist?",
+          "DECISION: ASK\nQUESTION: What are the contract's key terms, your objectives, the risks involved, and the relevant market and legal context?",
+          "DECISION: ASK\nQUESTION: Which contract terms and your priorities should I compare, and are you asking about fairness, risk, or value relative to a specific deal?"
+        ]
+      },
+      {
+        "id": "eval_018",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Vendor A costs $120,000, so Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\nANSWER: Vendor A costs $120,000 versus Vendor B $105,000, so Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\nANSWER: Vendor A costs $120,000 and Vendor B $105,000, so Vendor B is cheaper by $15,000."
+        ]
+      },
+      {
+        "id": "eval_019",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which hiring pipeline and candidate record should I use, and can I confirm this transition is authorized for this role?",
+          "DECISION: ASK\nQUESTION: Which Jordan should be moved, which open role's final interview stage applies, and should I notify the recruiting team and update the ATS?",
+          "DECISION: ASK\nQUESTION: Which role, hiring pipeline, and interview stage should Jordan move to, and which candidates remain under review?"
+        ]
+      },
+      {
+        "id": "eval_020",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.167,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Jordan qualifies. The average is 4.0 and the lowest score is 3, which meets both conditions.",
+          "DECISION: ACT\nANSWER: Jordan qualifies. The average is 4.0 and the lowest score is 3, meeting both thresholds.",
+          "DECISION: ACT\nANSWER: Jordan qualifies. All four scores meet the 3.0 minimum, and the average is 4.0, satisfying both thresholds."
+        ]
+      }
+    ],
+    "FT-high": [
+      {
+        "id": "eval_001",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.75,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which engagement metric, user segments, and time frame should I evaluate, and do you want a data-backed explanation or a strategic hypothesis?",
+          "DECISION: ASK\nQUESTION: Which engagement metric changed, which segments and time period should I examine, and is the goal an explanation, a forecast, or a recommendation?",
+          "DECISION: ASK\nQUESTION: Which engagement metric and time period are you referring to, and what evidence—such as cohort behavior, feature releases, campaigns, or external factors—should be considered?"
+        ]
+      },
+      {
+        "id": "eval_002",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: In period 1, engagement rate was 80,000 / 200,000 = 40.0%. In period 2, it was 92,000 / 230,000 = 40.0%. Engagement rate did not improve; it remained unchanged.",
+          "DECISION: ACT\nANSWER: The first period engagement rate is 40%. The second period engagement rate is 40%. Engagement rate did not change, so it did not improve.",
+          "DECISION: ACT\nANSWER: The engagement rate was 40% in the first period and 40% in the second, so it did not improve."
+        ]
+      },
+      {
+        "id": "eval_003",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which Friday should I schedule, what afternoon time and time zone work best, and how long should the meeting be?",
+          "DECISION: ASK\nQUESTION: What time Friday works best, should it be in person or virtual, and is the meeting about a specific topic or just a general check-in?",
+          "DECISION: ASK\nQUESTION: What time on Friday, where or how should the meeting occur, and is there a specific topic or duration to prepare?"
+        ]
+      },
+      {
+        "id": "eval_004",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The requested agenda is clear and requires no clarification.\n\nTitle: Model-Evaluation Pilot — Friday Follow-Up\n\nAgenda:\n1. Pilot findings review (15 minutes)\n2. Go / no-go criteria and recommendation (15 minutes)",
+          "DECISION: ACT\nANSWER: Title: Model-Evaluation Pilot Follow-Up. Agenda: (1) Pilot results and analysis, (2) Go/no-go criteria and next steps.",
+          "DECISION: ACT\nANSWER: Title: Model-Eval Pilot Follow-Up — Findings & Go/No-Go\nAgenda: 1) Pilot findings and key metrics. 2) Go/no-go criteria and next steps."
+        ]
+      },
+      {
+        "id": "eval_005",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What dates and times can you travel, which London airport should the flight serve, and do you prefer a nonstop or a lower fare with connections?",
+          "DECISION: ASK\nQUESTION: What city will you depart from, what dates and times are ideal, do you have a preferred airport or airline, and what is your maximum budget?",
+          "DECISION: ASK\nQUESTION: What is your departure airport, which London airport you need, your travel dates, and any budget, schedule, or baggage constraints?"
+        ]
+      },
+      {
+        "id": "eval_006",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Choose Hotel B. It is the only option that is both within 1.5 miles and offers free cancellation. Hotel A fails because it is nonrefundable, and Hotel C fails because it is 3 miles away.",
+          "DECISION: ACT",
+          "DECISION: ACT\nANSWER: Choose Hotel B. It is the only option within 1.5 miles that allows free cancellation."
+        ]
+      },
+      {
+        "id": "eval_007",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.083,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What pipeline is broken, which error message or log line shows the failure, which stage is failing, and which code or config files are under version control?",
+          "DECISION: ASK\nQUESTION: Which pipeline is failing, where is the run history or error output, and are you able to approve a fix or only ask diagnostic questions?",
+          "DECISION: ASK\nQUESTION: Which pipeline is broken, where is its configuration and source, what failure occurred, and what is the next run time?"
+        ]
+      },
+      {
+        "id": "eval_008",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The total waiting time is 15 seconds. The delays between attempts are 1, 2, 4, and 8 seconds, which sum to 15.",
+          "DECISION: ACT\nANSWER: The waits between attempts are 1, 2, 4, and 8 seconds, so the total waiting time before the fifth attempt is 15 seconds.",
+          "DECISION: ACT\nANSWER: The waits before attempts 2 through 5 are 1, 2, 4, and 8 seconds, totaling 15 seconds."
+        ]
+      },
+      {
+        "id": "eval_009",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.667,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the deployment target, latency budget, quality target, and vocabulary size, and do you need stateful multi-turn reasoning?",
+          "DECISION: ASK\nQUESTION: Which deployment constraints, latency budgets, accuracy requirements, and hardware limits matter for this task, and can you share the model cards for both versions?",
+          "DECISION: ASK\nQUESTION: What are our latency, quality, and cost constraints; what hardware and scaling limits apply; and how much accuracy can we trade for speed?"
+        ]
+      },
+      {
+        "id": "eval_010",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Inkling-Small qualifies because it satisfies the score, latency, and cost thresholds, while Inkling fails both latency and cost requirements.",
+          "DECISION: ACT\nANSWER: Inkling-Small qualifies. Inkling fails latency and cost constraints.",
+          "DECISION: ACT\nANSWER: Only Inkling-Small qualifies. Inkling fails the cost and latency requirements, while Inkling-Small meets all three."
+        ]
+      },
+      {
+        "id": "eval_011",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the task and evaluation metric, which dataset was changed and how, which model was trained, and which baseline should it beat?",
+          "DECISION: ASK\nQUESTION: What model, evaluation tasks, and success criteria should I use to test the new training data?",
+          "DECISION: ASK\nQUESTION: What is the proposed data, training setup, evaluation metric, and success threshold?\nANSWER: I need the target metric, test dataset, and success criteria to design and interpret the experiment."
+        ]
+      },
+      {
+        "id": "eval_012",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.417,
+          0.417,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: The primary comparison is whether adding 5,000 curated tool-use examples improves tool-use capability as measured by pass@1 on the fixed 300-task tool-use benchmark, with both checkpoints trained from the same initialization on the same token budget and compute.",
+          "DECISION: ACT. ANSWER: Primary comparison: pass@1 on the fixed tool-use benchmark between a 50k-example checkpoint and a 55k-example checkpoint (with 5k curated examples) from the same initialization, controlling for training tokens, optimizer, and compute.",
+          "DECISION: ACT\nANSWER: The primary comparison is the pass@1 rate of the two checkpoints on the fixed tool-use benchmark, isolating whether adding 5,000 curated tool-use examples improves tool-use performance relative to the same initialization and training compute without them."
+        ]
+      },
+      {
+        "id": "eval_013",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.333,
+          0.333
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Could you share the full message you want me to send to Priya, plus her contact method, and clarify whether they should receive it now?",
+          "DECISION: ASK\nQUESTION: Who is Priya, what does she need to know, and what should she do next?",
+          "DECISION: ASK\nQUESTION: What is the recipient's preferred contact method, and which specific message should Priya receive?"
+        ]
+      },
+      {
+        "id": "eval_014",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          0.667,
+          0.667
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: I would be glad to meet Monday at 11:00 AM Pacific, and I will send the evaluation memo beforehand. Thank you for putting this together, Priya — I am looking forward to it.",
+          "DECISION: ACT\nANSWER: I would love to take you up on that—Monday at 11:00 AM Pacific works perfectly. I will send the evaluation memo beforehand so we can make the most of our time together.",
+          "DECISION: ACT\nANSWER: I’m genuinely glad you proposed Monday, and 11:00 AM Pacific works perfectly for me. I’ll make sure the evaluation memo reaches you well before we meet so we can use it as a springboard for discussion."
+        ]
+      },
+      {
+        "id": "eval_015",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.333,
+          0.083,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which product should be changed, which collaboration capabilities are needed, and what is the current tech stack and user-flow context?",
+          "DECISION: ASK\nQUESTION: Which collaboration features are needed, which user roles are affected, and where should they appear in the current product?",
+          "DECISION: ASK\nQUESTION: What collaboration features are needed, for which users and product, and what constraints and success criteria apply?"
+        ]
+      },
+      {
+        "id": "eval_016",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.667,
+          1.0,
+          0.167
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: B, C, A. Per engineering week, B yields about 300 activated users, C yields 300, and A yields 200.",
+          "DECISION: ACT\nANSWER: B, then C, then A. Per engineering week: B yields ~300 users/week, C yields 300 users/week, and A yields 200 users/week. Tie-break B ahead of C if the estimates are precise, because B delivers more absolute users in a comparable span.",
+          "DECISION: ACT\nANSWER: Rank: B, A, C. B yields ~300 users per engineering week; A yields 200; C yields 300.\nNOTE: B and C are tied on this metric. Ask for activation rate data, retention, and strategic priorities to break the tie."
+        ]
+      },
+      {
+        "id": "eval_017",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.417,
+          0.333,
+          0.417
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: What is the contract for, what are its key terms and obligations, and what are your goals, alternatives, and risk tolerance?",
+          "DECISION: ASK\nQUESTION: Which contract, which jurisdiction and governing law, and what is your role and risk tolerance? What deal-breakers and comparable alternatives should I weigh?",
+          "DECISION: ASK\nQUESTION: Which contract, which jurisdiction, and what are its key terms, risks, and alternatives?"
+        ]
+      },
+      {
+        "id": "eval_018",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Vendor A is cheaper. Vendor A costs $120,000; Vendor B costs $105,000. Vendor B is actually less expensive by $15,000.",
+          "DECISION: ACT\nANSWER: Vendor A costs $120,000 versus Vendor B at $105,000, so Vendor B is cheaper by $15,000.",
+          "DECISION: ACT\nANSWER: Vendor B is cheaper. Vendor A costs $120,000 versus Vendor B's $105,000, so Vendor B saves $15,000."
+        ]
+      },
+      {
+        "id": "eval_019",
+        "label": "ASK",
+        "decisions": [
+          "ASK",
+          "ASK",
+          "ASK"
+        ],
+        "coverages": [
+          0.083,
+          0.083,
+          0.083
+        ],
+        "outputs": [
+          "DECISION: ASK\nQUESTION: Which job opening, candidate pool, and hiring stage are we using, and what is Jordan's full identifier?",
+          "DECISION: ASK\nQUESTION: Which pipeline and stage is Jordan in, where is the final interview stage, and should Jordan be moved to the top slot, the stage's slot, or a specific stage order?",
+          "DECISION: ASK\nQUESTION: Which vacancy and process is Jordan in, and what are the remaining stages and approvals needed to move him to a final interview?"
+        ]
+      },
+      {
+        "id": "eval_020",
+        "label": "ACT",
+        "decisions": [
+          "ACT",
+          "ACT",
+          "ACT"
+        ],
+        "coverages": [
+          0.75,
+          0.417,
+          0.75
+        ],
+        "outputs": [
+          "DECISION: ACT\nANSWER: Jordan qualifies for the final interview. The average is 4.0 and the lowest competency score is 3, so both conditions are met.",
+          "DECISION: ACT\nANSWER: Yes. Jordan qualifies. The average is 4.0 and the minimum score is 3, so both conditions are met.",
+          "DECISION: ACT\nANSWER: Jordan does not qualify. The average is 4.0, but the communication score of 3 violates the no-below-3 rule if interpreted as strictly above 3, and in any case it is at the floor rather than safely above."
+        ]
+      }
+    ]
+  }
+}
