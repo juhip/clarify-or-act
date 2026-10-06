@@ -1,4 +1,4 @@
-# Clarify-or-Act: a small post-training experiment on Inkling-Small
+# Clarify-or-Act: a small post-training experiment on Inkling-Small using Tinker
 
 Can a small LoRA fine-tune teach an open-weights model when to **ask** a clarifying
 question versus **act** on the request, without making it annoyingly hesitant?
