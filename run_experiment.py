@@ -31,6 +31,7 @@ import random
 
 import tinker
 from tinker import types
+from tinker_cookbook.supervised.common import compute_mean_nll
 
 import clarify_common as cc
 
@@ -256,16 +257,20 @@ async def main():
     losses = []
     for epoch in range(epochs):
         random.shuffle(datums)
-        last_loss = None
+        # Tinker's forward_backward returns per-token logprobs, not a scalar loss.
+        # Train loss = weighted mean NLL over assistant tokens across the whole epoch.
+        epoch_logprobs, epoch_weights = [], []
         for start in range(0, len(datums), BATCH_SIZE):
             batch = datums[start:start + BATCH_SIZE]
             fb = await training_client.forward_backward_async(data=batch, loss_fn="cross_entropy")
             fb_res = await fb.result_async()
-            last_loss = getattr(fb_res, "loss", None)
+            epoch_logprobs += [out["logprobs"] for out in fb_res.loss_fn_outputs]
+            epoch_weights += [d.loss_fn_inputs["weights"] for d in batch]
             opt = await training_client.optim_step_async(types.AdamParams(learning_rate=LEARNING_RATE))
             await opt.result_async()
-        losses.append(float(last_loss) if last_loss is not None else None)
-        print(f"      epoch {epoch + 1}/{epochs}  loss={last_loss}")
+        epoch_nll = compute_mean_nll(epoch_logprobs, epoch_weights)
+        losses.append(round(float(epoch_nll), 4))
+        print(f"      epoch {epoch + 1}/{epochs}  train mean NLL={epoch_nll:.4f}")
 
     # ---- FINE-TUNED ----------------------------------------------------
     print("[3/4] Fine-tuned eval at both effort levels ...")

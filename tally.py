@@ -151,7 +151,7 @@ def lift_table(runs) -> str:
     hard = [r for r in runs if "hard" in str(r["config"].get("eval_file", ""))]
     if not hard:
         return ""
-    out = ["| Lift (FT − base, points) | " + " | ".join(f"Run {r['run']} low / high" for r in hard) + " |",
+    out = ["| Lift (FT − base, points) | " + " | ".join(f"Run {r['run']}" + ("" if r["is_original"] else " (re-run)") + " low / high" for r in hard) + " |",
            "|---|" + "---|" * len(hard)]
     for label, key in [("Autonomy", "autonomy_rate"), ("Decision accuracy", "decision_accuracy"),
                        ("Clarification recall", "clarification_recall"),
