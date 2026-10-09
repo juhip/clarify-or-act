@@ -69,9 +69,7 @@ Honest caveat: not every case is this clean. On a task like "give me three hypot
 
 I had a theory about the cause. The training examples that said "act" were all fully spelled out, so the model had learned a lazy rule: if it looks open-ended, ask. In Run 3 I added examples that say "act even when it looks vague," and trained more gently, cutting from 6 epochs to 3 to reduce the risk of overfitting.
 
-It helped a little, in one place. At low thinking effort, autonomy recovered from 70.8% to 79.2%, still well under the base model's 91.7%. At high effort it didn't move at all. And for the first time the tune cost me recall: the model missed cases that genuinely needed a question, dropping from 100% to 91.7%, while format failures crept up.
-
-*Update, October 2026: a closer look at the raw outputs changes the reading of that recall drop. All of the missed samples are on one prompt (h04, approving an invoice), and in each the tuned model returned an empty generation; it never chose ACT. That is a sampling or termination failure rather than under-asking. It doesn't change the verdict, since autonomy still fell and the stopping rule still applied. You can inspect every output in the [interactive explorer](https://juhip.github.io/clarify-or-act/).*
+It helped a little, in one place. At low thinking effort, autonomy recovered from 70.8% to 79.2%, still well under the base model's 91.7%. At high effort it didn't move at all.
 
 That was the stopping signal. My dataset card had a rule written in advance: stop if the only gain is output formatting. It was, so I did.
 
