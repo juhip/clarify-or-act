@@ -11,6 +11,11 @@ model.
 Full write-up: [`WRITEUP.md`](WRITEUP.md), also published as
 ["When the Right Answer Is 'Don't Fine-Tune'"](https://juhiparekh.com/work-writing/f/when-the-right-answer-is-%E2%80%9Cdon%E2%80%99t-fine-tune%E2%80%9D).
 
+**[Explore the runs interactively →](https://juhip.github.io/clarify-or-act/)** Every
+prompt, every sample, every raw output, plus the pre-registered criteria and each metric
+base → fine-tuned. The page lives in [`docs/`](docs/index.html); `python build_explorer.py`
+refreshes its data from `results/`.
+
 ## Results
 
 Each cell is untrained model → fine-tuned model. Where the low- and high-effort variants
@@ -34,8 +39,9 @@ tune pushed to nearly 100% in every run.
 Run 1's eval was saturated: the untrained model already scored 100%, so it could not
 measure lift. Run 2 replaced it with 16 borderline prompts and the tradeoff appeared
 immediately. Run 3 added 12 borderline-ACT training examples and halved the epochs; it
-recovered some autonomy at low effort, none at high effort, and regressed recall for the
-first time. The dataset card's pre-registered stopping rule said stop, so it stopped.
+recovered some autonomy at low effort, none at high effort, and recall dipped to 91.7%.
+That dip is not under-asking: every missed sample is on one prompt (h04), where the tuned
+model ended generation immediately with no output at all. The dataset card's pre-registered stopping rule said stop, so it stopped.
 
 ![All three runs side by side](figures/fig6-all-runs.png)
 
@@ -52,6 +58,7 @@ first time. The dataset card's pre-registered stopping rule said stop, so it sto
 | `DATASET_CARD.md` | Design doc: label policy, output contract, metrics, success criteria, failure taxonomy, stopping rule, and what each run added |
 | `WRITEUP.md` | The narrative |
 | `figures/` | The six figures used in the write-up |
+| `docs/index.html` | Interactive explorer, served by GitHub Pages; `build_explorer.py` refreshes its embedded data from `results/` |
 
 ## Design
 
